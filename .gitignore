@@ -1,0 +1,80 @@
+# 🚀 Python-related ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# 🚀 Virtual Environments
+venv/
+.env/
+.micromamba/
+micromamba/
+micromamba.yaml
+*.mamba
+*.conda
+*.venv
+.Python
+
+# 🚀 Micromamba Environment
+/home/rob/micromamba/envs/tfm/
+micromamba/envs/
+micromamba/pkgs/
+*.egg-info/
+*.lock
+
+# 🚀 Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# 🚀 VS Code Configuration
+.vscode/
+.vscode-server/
+*.code-workspace
+*.history
+
+# 🚀 OS-Specific Junk
+.DS_Store
+Thumbs.db
+
+# 🚀 Logs and Debugging Files
+logs/
+debug.log
+nohup.out
+
+# 🚀 Laban Editor Project-Specific Ignores
+LabanEditor/build/
+LabanEditor/dist/
+LabanEditor/*.log
+LabanEditor/__pycache__/
+LabanEditor/.pytest_cache/
+LabanEditor/temp/
+LabanEditor/cache/
+LabanEditor/output/
+LabanEditor/test_results/
+
+# 🚀 Model & Data Files (Modify if needed)
+*.h5
+*.pt
+*.npz
+*.npy
+datasets/
+data/
+models/
+checkpoints/
+
+# 🚀 Compiled Binaries (if any)
+*.so
+*.dll
+*.dylib
+*.exe
+
+# 🚀 Ignore any temporary or backup files
+*.bak
+*.swp
+*.swo
+# 🚀 Python-related ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
