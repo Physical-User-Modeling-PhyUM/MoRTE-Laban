@@ -5,7 +5,8 @@
 
 import math
 import numpy as np
-
+from scipy.spatial.transform import Rotation as Rscipy
+import cv2
 #------------------------------------------------------------------------------
 # Normalize a 1 dimension vector
 #
@@ -90,47 +91,141 @@ def calculate_base_rotation(joint):
 # Transform origin from kinect-base to shoulder-base, 
 # convert position information to angle/direction+level
 # Replace LabaProcessor::(FindDriectionXOZ, FindLevelYOZ, FindLevelXOY)
-# 
+#
+import numpy as np
+
 def raw2sphere(joint, base_rotation=None):
-    shL = np.zeros(3)
-    shR = np.zeros(3)
-    elbowR = np.zeros(3)
-    elbowL = np.zeros(3)
-    wristR = np.zeros(3)
-    wristL = np.zeros(3)
+    """
+    Converts Kinect joint positions into spherical coordinates, respecting Labanotation's
+    motion principles and staff structure.
+    """
+    # Extract **shoulders** (base for arm movements)
+    shL = np.array([joint[0]['shoulderL']['x'], joint[0]['shoulderL']['y'], joint[0]['shoulderL']['z']])
+    shR = np.array([joint[0]['shoulderR']['x'], joint[0]['shoulderR']['y'], joint[0]['shoulderR']['z']])
 
-    shL[0] = joint[0]['shoulderL']['x']
-    shL[1] = joint[0]['shoulderL']['y']
-    shL[2] = joint[0]['shoulderL']['z']
-    shR[0] = joint[0]['shoulderR']['x']
-    shR[1] = joint[0]['shoulderR']['y']
-    shR[2] = joint[0]['shoulderR']['z']
+    # Extract **torso & pelvis**
+    spine = np.array([joint[0]['spineM']['x'], joint[0]['spineM']['y'], joint[0]['spineM']['z']])
+    chest = np.array([joint[0]['spineS']['x'], joint[0]['spineS']['y'], joint[0]['spineS']['z']])
+    pelvis = np.array([joint[0]['spineB']['x'], joint[0]['spineB']['y'], joint[0]['spineB']['z']])
 
-    elbowR[0] = joint[0]['elbowR']['x']-shR[0]
-    elbowR[1] = joint[0]['elbowR']['y']-shR[1]
-    elbowR[2] = joint[0]['elbowR']['z']-shR[2]
-    elbowL[0] = joint[0]['elbowL']['x']-shL[0]
-    elbowL[1] = joint[0]['elbowL']['y']-shL[1]
-    elbowL[2] = joint[0]['elbowL']['z']-shL[2]
-    
-    wristR[0] = joint[0]['wristR']['x']-joint[0]['elbowR']['x']
-    wristR[1] = joint[0]['wristR']['y']-joint[0]['elbowR']['y']
-    wristR[2] = joint[0]['wristR']['z']-joint[0]['elbowR']['z']
-    wristL[0] = joint[0]['wristL']['x']-joint[0]['elbowL']['x']
-    wristL[1] = joint[0]['wristL']['y']-joint[0]['elbowL']['y']
-    wristL[2] = joint[0]['wristL']['z']-joint[0]['elbowL']['z']
+    # Extract **head position relative to spine**
+    head = np.array([joint[0]['head']['x'], joint[0]['head']['y'], joint[0]['head']['z']]) - spine
 
+    # Extract **torso movement relative to pelvis**
+    torso = chest - pelvis  # Approximate torso motion (spine bending, leaning)
+
+    # Extract **arm movements**
+    elbowR = np.array([joint[0]['elbowR']['x'] - shR[0], joint[0]['elbowR']['y'] - shR[1], joint[0]['elbowR']['z'] - shR[2]])
+    elbowL = np.array([joint[0]['elbowL']['x'] - shL[0], joint[0]['elbowL']['y'] - shL[1], joint[0]['elbowL']['z'] - shL[2]])
+    wristR = np.array([joint[0]['wristR']['x'] - joint[0]['elbowR']['x'], joint[0]['wristR']['y'] - joint[0]['elbowR']['y'], joint[0]['wristR']['z'] - joint[0]['elbowR']['z']])
+    wristL = np.array([joint[0]['wristL']['x'] - joint[0]['elbowL']['x'], joint[0]['wristL']['y'] - joint[0]['elbowL']['y'], joint[0]['wristL']['z'] - joint[0]['elbowL']['z']])
+
+    # Extract **leg movements**
+    hipR = np.array([joint[0]['hipR']['x'], joint[0]['hipR']['y'], joint[0]['hipR']['z']])
+    hipL = np.array([joint[0]['hipL']['x'], joint[0]['hipL']['y'], joint[0]['hipL']['z']])
+    kneeR = np.array([joint[0]['kneeR']['x'] - hipR[0], joint[0]['kneeR']['y'] - hipR[1], joint[0]['kneeR']['z'] - hipR[2]])
+    kneeL = np.array([joint[0]['kneeL']['x'] - hipL[0], joint[0]['kneeL']['y'] - hipL[1], joint[0]['kneeL']['z'] - hipL[2]])
+    ankleR = np.array([joint[0]['ankleR']['x'] - joint[0]['kneeR']['x'], joint[0]['ankleR']['y'] - joint[0]['kneeR']['y'], joint[0]['ankleR']['z'] - joint[0]['kneeR']['z']])
+    ankleL = np.array([joint[0]['ankleL']['x'] - joint[0]['kneeL']['x'], joint[0]['ankleL']['y'] - joint[0]['kneeL']['y'], joint[0]['ankleL']['z'] - joint[0]['kneeL']['z']])
+    base_rotation=None  
     if base_rotation is None:
         conv = calculate_base_rotation(joint)
     else:
         conv = base_rotation
 
-    elRdeg = to_sphere(np.dot(conv.T, elbowR))
-    elLdeg = to_sphere(np.dot(conv.T, elbowL))
-    wrRdeg = to_sphere(np.dot(conv.T, wristR))
-    wrLdeg = to_sphere(np.dot(conv.T, wristL))
+    # Convert all extracted positions to spherical coordinates
+    elRdeg, elLdeg = to_sphere(np.dot(conv.T, elbowR)), to_sphere(np.dot(conv.T, elbowL))
+    wrRdeg, wrLdeg = to_sphere(np.dot(conv.T, wristR)), to_sphere(np.dot(conv.T, wristL))
+    knRdeg, knLdeg = to_sphere(np.dot(conv.T, kneeR)), to_sphere(np.dot(conv.T, kneeL))
+    anRdeg, anLdeg = to_sphere(np.dot(conv.T, ankleR)), to_sphere(np.dot(conv.T, ankleL))
+    head_deg = to_sphere(np.dot(conv.T, head))
+    torso_deg = to_sphere(np.dot(conv.T, torso))  # Convert torso movement
 
-    return (elRdeg,elLdeg,wrRdeg,wrLdeg)
+    return (elRdeg, elLdeg, wrRdeg, wrLdeg, knRdeg, knLdeg, anRdeg, anLdeg, head_deg, torso_deg)
+
+
+# def raw2sphere(joint, base_rotation=None, base_translation=None):
+#     """
+#     Converts a skeleton's 3D positions into spherical coordinates (direction & level)
+#     for Labanotation.
+
+#     Args:
+#         joint (dict): Kinect joint data.
+#         base_rotation (np.array): 3x3 rotation matrix aligning skeleton to global frame.
+#         base_translation (np.array): Translation vector for world-space positioning.
+
+#     Returns:
+#         Spherical coordinates for:
+#         - Right & Left Elbow
+#         - Right & Left Wrist
+#         - Right & Left Knee
+#         - Right & Left Ankle
+#         - Head
+#         - Torso
+#     """
+#     # ✅ Extract **Body Joints**
+#     pelvis  = np.array([joint[0]['spineB']['x'], joint[0]['spineB']['y'], joint[0]['spineB']['z']])
+#     spineM  = np.array([joint[0]['spineM']['x'], joint[0]['spineM']['y'], joint[0]['spineM']['z']])
+#     chest   = np.array([joint[0]['spineS']['x'], joint[0]['spineS']['y'], joint[0]['spineS']['z']])
+#     head    = np.array([joint[0]['head']['x'], joint[0]['head']['y'], joint[0]['head']['z']])
+
+#     shoulderL = np.array([joint[0]['shoulderL']['x'], joint[0]['shoulderL']['y'], joint[0]['shoulderL']['z']])
+#     shoulderR = np.array([joint[0]['shoulderR']['x'], joint[0]['shoulderR']['y'], joint[0]['shoulderR']['z']])
+    
+#     elbowL = np.array([joint[0]['elbowL']['x'], joint[0]['elbowL']['y'], joint[0]['elbowL']['z']])
+#     elbowR = np.array([joint[0]['elbowR']['x'], joint[0]['elbowR']['y'], joint[0]['elbowR']['z']])
+
+#     wristL = np.array([joint[0]['wristL']['x'], joint[0]['wristL']['y'], joint[0]['wristL']['z']])
+#     wristR = np.array([joint[0]['wristR']['x'], joint[0]['wristR']['y'], joint[0]['wristR']['z']])
+
+#     # ✅ Extract **Legs**
+#     hipL   = np.array([joint[0]['hipL']['x'], joint[0]['hipL']['y'], joint[0]['hipL']['z']])
+#     hipR   = np.array([joint[0]['hipR']['x'], joint[0]['hipR']['y'], joint[0]['hipR']['z']])
+
+#     kneeL  = np.array([joint[0]['kneeL']['x'], joint[0]['kneeL']['y'], joint[0]['kneeL']['z']])
+#     kneeR  = np.array([joint[0]['kneeR']['x'], joint[0]['kneeR']['y'], joint[0]['kneeR']['z']])
+
+#     ankleL = np.array([joint[0]['ankleL']['x'], joint[0]['ankleL']['y'], joint[0]['ankleL']['z']])
+#     ankleR = np.array([joint[0]['ankleR']['x'], joint[0]['ankleR']['y'], joint[0]['ankleR']['z']])
+
+   
+#     rotation_matrix = Rscipy.from_euler('xyz', base_rotation, degrees=False).as_matrix()
+#     # Convert axis-angle to 3x3 matrix
+
+#     # pelvis = rotation_matrix @ pelvis - base_translation
+#     # spineM = rotation_matrix @ spineM
+#     # chest  = rotation_matrix @ chest- base_translation
+#     # head   = rotation_matrix @ head- base_translation
+#     # shoulderL = rotation_matrix @ shoulderL- base_translation
+#     # shoulderR = rotation_matrix @ shoulderR- base_translation
+#     # elbowL = rotation_matrix @ elbowL- base_translation
+#     # elbowR = rotation_matrix @ elbowR- base_translation
+#     # wristL = rotation_matrix @ wristL- base_translation
+#     # wristR = rotation_matrix @ wristR- base_translation
+#     # hipL   = rotation_matrix @ hipL- base_translation
+#     # hipR   = rotation_matrix @ hipR- base_translation
+#     # kneeL  = rotation_matrix @ kneeL- base_translation
+#     # kneeR  = rotation_matrix @ kneeR- base_translation
+#     # ankleL = rotation_matrix @ ankleL- base_translation
+#     # ankleR = rotation_matrix @ ankleR- base_translation
+
+#     # ✅ Convert to **Spherical Coordinates** for Labanotation
+#     elRdeg = to_sphere(elbowR - shoulderR)
+#     elLdeg = to_sphere(elbowL - shoulderL)
+#     wrRdeg = to_sphere(wristR - (elbowR- shoulderR))
+#     wrLdeg = to_sphere(wristL - (elbowL- shoulderL))
+    
+#     knRdeg = to_sphere(kneeR - hipR)
+#     knLdeg = to_sphere(kneeL - hipL)
+#     anRdeg = to_sphere(ankleR - (kneeR-hipR))
+#     anLdeg = to_sphere(ankleL - (kneeL-hipR))
+
+#     head_deg = to_sphere(head - (chest - pelvis))
+#     torso_deg = to_sphere(chest - pelvis)
+
+#     return elRdeg, elLdeg, wrRdeg, wrLdeg, knRdeg, knLdeg, anRdeg, anLdeg, head_deg, torso_deg
+
+
 
 #------------------------------------------------------------------------------
 # replace LabaProcessor::CoordinateToLabanotation, FindDirectionsHML, FindDirectionsFSB
@@ -141,7 +236,6 @@ def raw2sphere(joint, base_rotation=None):
 #
 # Height:
 # place high--'ph', high--'h', middle/normal--'m', low--'l', place low--'pl'
-#
 def coordinate2laban(theta, phi):
     laban = ['Normal', 'Forward']
     
@@ -183,20 +277,33 @@ def coordinate2laban(theta, phi):
 
     return laban
 
+
+
 #------------------------------------------------------------------------------
 #
 def LabanKeyframeToScript(idx, time, dur, laban_score):
-    strScript = ""
+    """
+    Generates a Labanotation keyframe script with full-body motion capture.
+    """
 
-    strScript += '#' + str(idx) + '\n'
-    strScript += 'Start Time:'+ str(time) +'\nDuration:' + str(dur) + '\nHead:Forward:Normal\n'
-    strScript += 'Right Elbow:' + laban_score[0][0] + ':' + laban_score[0][1] + '\n'
-    strScript += 'Right Wrist:' + laban_score[1][0] + ':' + laban_score[1][1] + '\n'
-    strScript += 'Left Elbow:'  + laban_score[2][0] + ':' + laban_score[2][1] + '\n'
-    strScript += 'Left Wrist:'  + laban_score[3][0] + ':' + laban_score[3][1] + '\n'
+    strScript = f"#{idx}\nStart Time:{time}\nDuration:{dur}\n"
+
+    # Extract values from `laban_score`, which is a list of (direction, level) pairs
+    strScript += f"Head:{laban_score[8][0]}:{laban_score[8][1]}\n"
+    strScript += f"Torso:{laban_score[7][0]}:{laban_score[7][1]}\n"
+    strScript += f"Right Elbow:{laban_score[0][0]}:{laban_score[0][1]}\n"
+    strScript += f"Right Wrist:{laban_score[1][0]}:{laban_score[1][1]}\n"
+    strScript += f"Left Elbow:{laban_score[2][0]}:{laban_score[2][1]}\n"
+    strScript += f"Left Wrist:{laban_score[3][0]}:{laban_score[3][1]}\n"
+    strScript += f"Right Knee:{laban_score[4][0]}:{laban_score[4][1]}\n"
+    strScript += f"Right Foot:{laban_score[5][0]}:{laban_score[5][1]}\n"
+    strScript += f"Left Knee:{laban_score[6][0]}:{laban_score[6][1]}\n"
+    strScript += f"Left Foot:{laban_score[7][0]}:{laban_score[7][1]}\n"
+
     strScript += 'Rotation:ToLeft:0.0\n'
 
     return strScript
+
 
 #------------------------------------------------------------------------------
 #

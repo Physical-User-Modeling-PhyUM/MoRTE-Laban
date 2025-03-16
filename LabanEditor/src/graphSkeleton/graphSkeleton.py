@@ -579,14 +579,22 @@ class graph3D:
 
         self.calc_joint(11, [0,0,0])                    # wristLeft->handLeft
         self.calc_joint(12, [1.5,-0, 0.5])              # spineBase->hipLeft
-        self.calc_joint(13, [0,-6,0])                   # hipLeft->kneeLeft
-        self.calc_joint(14, [0,-7,0])                   # kneeLeft->ankleLeft
-        self.calc_joint(15, [0.2,-0.2,3])               # ankleLeft->footLeft
+        # self.calc_joint(13, [0,-6,0])                   # hipLeft->kneeLeft
+        # self.calc_joint(14, [0,-7,0])                   # kneeLeft->ankleLeft
+        # self.calc_joint(15, [0.2,-0.2,3])               # ankleLeft->footLeft
         self.calc_joint(16, [-1.5,-0, 0.5])             # spineBase->hipRight
-        self.calc_joint(17, [0,-6,0])                   # hipRight->kneeRight
-        self.calc_joint(18, [0,-7,0])                   # kneeRight->ankleRight
-        self.calc_joint(19, [-0.2,-0.2,3])              # ankleRight->footRight
+        # self.calc_joint(17, [0,-6,0])                   # hipRight->kneeRight
+        # self.calc_joint(18, [0,-7,0])                   # kneeRight->ankleRight
+        # self.calc_joint(19, [-0.2,-0.2,3])              # ankleRight->footRight
 
+        # # Adjust knees and feet based on labanotation symbols
+        self.calc_joint(13, self.laban2vec(laban, "left knee"))  # hipLeft -> kneeLeft
+        self.calc_joint(14, self.laban2vec(laban, "left ankle"))  # kneeLeft -> ankleLeft
+        self.calc_joint(15, self.laban2vec(laban, "left foot"))  # ankleLeft -> footLeft
+
+        self.calc_joint(17, self.laban2vec(laban, "right knee"))  # hipRight -> kneeRight
+        self.calc_joint(18, self.laban2vec(laban, "right ankle"))  # kneeRight -> ankleRight
+        self.calc_joint(19, self.laban2vec(laban, "right foot"))  # ankleRight -> footRight
     #------------------------------------------------------------------------------
     # calculate the given joint using its parent joint and a vector
     #
@@ -650,13 +658,16 @@ class graph3D:
                     print('Unknown Direction.')
                 break
 
-        # length of the limb
-        l = 5
-        y = l * math.cos(theta/180.0*pi)
-        x = l * math.sin(theta/180.0*pi) * math.sin(phi/180.0*pi)
-        z = l * math.sin(theta/180.0*pi) * math.cos(phi/180.0*pi)
+        # ✅ **4️⃣ Convert to Cartesian Coordinates**
+        limb_length=5
+        y = limb_length * math.cos(math.radians(theta))
+        x = limb_length * math.sin(math.radians(theta)) * math.sin(math.radians(phi))
+        z = limb_length * math.sin(math.radians(theta)) * math.cos(math.radians(phi))
 
-        return [x,y,z]
+        return [x, y, z]
+
+
+
 
     #------------------------------------------------------------------------------
     #

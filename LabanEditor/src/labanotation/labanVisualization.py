@@ -23,67 +23,85 @@ class convertLabanScriptToView:
     # w: width; h: height; text: labanotation script
     #
     def __init__(self, w, h, text):
-        if (text == ""):
+        if text == "":
             self.timeOffset = 0.0
             self.timeScale = 1.0
             self.width = w
             self.height = h
-            self.img = np.ones((self.height,self.width), np.uint8)
-            self.img = self.img*255
+            self.img = np.ones((self.height, self.width), np.uint8) * 255
             return
 
-        l_elbow=[];l_wrist=[];r_wrist=[];r_elbow=[];head=[]
+        # **Store Labanotation for all body parts**
+        l_elbow, l_wrist, r_wrist, r_elbow = [], [], [], []
+        r_knee, l_knee, r_foot, l_foot = [], [], [], []
+        head, torso = [], []
         i = 0
         self.duration = 0
         self.cnt = 0
-        self.name = 'labanotation view'
-        laban_line = text.split("\n")
+        self.name = "Labanotation View"
 
-        while i < len(laban_line): # and laban_line[i]!="":
-            laban_line[i] = laban_line[i].lower()
-            if laban_line[i]=="\n" or laban_line[i]=="":
-                # empty line skip
-                i+=1
+        laban_lines = text.split("\n")
+
+        while i < len(laban_lines):
+            laban_lines[i] = laban_lines[i].lower()
+            if laban_lines[i] == "\n" or laban_lines[i] == "":
+                i += 1
                 continue
-            elif laban_line[i][0]=="#":
-                # comment, skip
-                i+=1
+            elif laban_lines[i][0] == "#":
+                i += 1
                 continue
-            tmp_str = laban_line[i].split(":")
-            # [time, direction, level]
-            if tmp_str[0]=="start time":
-                if self.cnt==0:
+
+            tmp_str = laban_lines[i].split(":")
+            if tmp_str[0] == "start time":
+                if self.cnt == 0:
                     start = int(tmp_str[1])
-                self.cnt+=1
-                self.duration = int(tmp_str[1])-start
-                time_stamp = int(tmp_str[1])/1000.0
-            elif tmp_str[0]=="left elbow":
-                l_elbow.append([time_stamp,tmp_str[1],tmp_str[2]])
-            elif tmp_str[0]=="left wrist":
-                l_wrist.append([time_stamp,tmp_str[1],tmp_str[2]])
-            elif tmp_str[0]=="right wrist":
-                r_wrist.append([time_stamp,tmp_str[1],tmp_str[2]])
-            elif tmp_str[0]=="right elbow":
-                r_elbow.append([time_stamp,tmp_str[1],tmp_str[2]])
-            elif tmp_str[0]=="head":
-                head.append([time_stamp,tmp_str[1],tmp_str[2]])
-            i+=1
+                self.cnt += 1
+                self.duration = int(tmp_str[1]) - start
+                time_stamp = int(tmp_str[1]) / 1000.0
+            elif tmp_str[0] == "left elbow":
+                l_elbow.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "left wrist":
+                l_wrist.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "right wrist":
+                r_wrist.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "right elbow":
+                r_elbow.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "left knee":
+                l_knee.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "right knee":
+                r_knee.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "left foot":
+                l_foot.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "right foot":
+                r_foot.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "torso":
+                torso.append([time_stamp, tmp_str[1], tmp_str[2]])
+            elif tmp_str[0] == "head":
+                head.append([time_stamp, tmp_str[1], tmp_str[2]])
+            i += 1
 
-        self.scale = h/(2+self.duration/1000)
+        self.scale = h / (2 + self.duration / 1000)
         self.width = w
-        self.height = h+self.bottom
+        self.height = h + self.bottom
         self.timeOffset = h
-        self.timeScale = (self.scale * (self.duration / 1000.0)) # (h * 1000.0 / float(self.duration))
+        self.timeScale = self.scale * (self.duration / 1000.0)
 
-        self.img = np.ones((self.height,self.width), np.uint8)
-        self.img = self.img*255
+        self.img = np.ones((self.height, self.width), np.uint8) * 255
         self.init_canvas()
-        
+
+        # **Draw all body parts**
         self.draw_limb(1, "left", l_wrist)
         self.draw_limb(2, "left", l_elbow)
+        self.draw_limb(3, "left", l_knee)
+        self.draw_limb(4, "left", l_foot)
+        self.draw_limb(7, "right", torso)
         self.draw_limb(9, "right", r_elbow)
         self.draw_limb(10, "right", r_wrist)
-        self.draw_limb(11, "right", head)
+        self.draw_limb(11, "right", r_knee)
+        self.draw_limb(12, "right", r_foot)
+        self.draw_limb(13, "right", head)
+
+     
 
     #------------------------------------------------------------------------------
     # draw a vertical dashed line.
