@@ -321,11 +321,38 @@ class graph3D:
                 print('Right Wrist:' + str(wrR[t][1]) + ', ' + str(wrR[t][2]))
                 print('Left Elbow:' + str(elL[t][1]) + ', ' + str(elL[t][2]))
                 print('Left Wrist:' + str(wrL[t][1]) + ', ' + str(wrL[t][2]))
+                print('Right Knee:' + str(knR[t][1]) + ', ' + str(knR[t][2]))
+                print('Left Knee:' + str(knL[t][1]) + ', ' + str(knL[t][2]))
+                print('Right Ankle:' + str(anR[t][1]) + ', ' + str(anR[t][2]))
+                print('Left Ankle:' + str(anL[t][1]) + ', ' + str(anL[t][2]))
+                print('Right Foot:' + str(ftR[t][1]) + ', ' + str(ftR[t][2]))
+                print('Left Foot:' + str(ftL[t][1]) + ', ' + str(ftL[t][2]))
+                print('Head:' + str(head[t][1]) + ', ' + str(head[t][2]))
+                print('Torso:' + str(torso[t][1]) + ', ' + str(torso[t][2]))
 
-            curr_laban = ['Start Time:' + str(time), 'Duration:0', 'Head:Forward:Normal', 
-                'Right Elbow:' + laban[0][0] + ':' + laban[0][1], 'Right Wrist:' + laban[1][0] + ':' + laban[1][1], 
-                'Left Elbow:' + laban[2][0] + ':' + laban[2][1], 'Left Wrist:' + laban[3][0] + ':' + laban[3][1], 
-                'Rotation:ToLeft:0.0']
+            curr_laban = [
+                        'Start Time:' + str(time),
+                        'Duration:0',
+                        
+                        # Staff-aligned ordering
+                        'Left Elbow:' + laban[0][0] + ':' + laban[0][1],
+                        'Left Wrist:' + laban[1][0] + ':' + laban[1][1],
+                        'Torso:' + laban[2][0] + ':' + laban[2][1],
+                        'Left Ankle:' + laban[3][0] + ':' + laban[3][1],
+                        'Left Foot:' + laban[4][0] + ':' + laban[4][1],
+                        'Left Knee:' + laban[5][0] + ':' + laban[5][1],
+                        'Right Knee:' + laban[6][0] + ':' + laban[6][1],
+                        'Right Foot:' + laban[7][0] + ':' + laban[7][1],
+                        'Right Ankle:' + laban[8][0] + ':' + laban[8][1],
+                        'Torso_Repeat:' + laban[9][0] + ':' + laban[9][1],
+                        'Right Wrist:' + laban[10][0] + ':' + laban[10][1],
+                        'Right Elbow:' + laban[11][0] + ':' + laban[11][1],
+                        'Head:' + laban[12][0] + ':' + laban[12][1],
+                        #'Support:' + laban[13],
+                        'Rotation:ToLeft:' + str(laban[14])
+                    ]
+
+
 
             self.drawLabanotationSkeleton(laban = curr_laban)
 
@@ -475,7 +502,7 @@ class graph3D:
             if (i==20) or (i==4) or (i==5) or (i==6) or (i==8) or (i==9) or (i==10):
                 alpha = a
             else:
-                alpha = 0.3
+                alpha = 0.5
 
             p = self.joints[i]
             self.ax.scatter(p[0],p[1],p[2],color=c, alpha=alpha)
@@ -556,11 +583,11 @@ class graph3D:
     # convert labanotation to joint points
     #
     def mapLabanotation2Joints(self, laban):
-        self.calc_joint(1,  [0, 6, 0])                  # spineBase->spineMid
-        self.calc_joint(20, [0, 5, 0])                  # spineMid->spineShoulder
+        self.calc_joint(1,  np.array(self.laban2vec(laban, "torso"))*[0.3,0.8,0.3])                  # spineBase->spineMid
+        self.calc_joint(20, np.array(self.laban2vec(laban, "torso"))* [0.3,0.6,0.3])                 # spineMid->spineShoulder
         self.calc_joint(2,  [0, 2, 0])                  # spineShoulder->neck
-        self.calc_joint(3,  [0, 3, 0])                  # neck->head
-        self.calc_joint(4,  [4,-0.5,0])                 # spineShoulder->shoulderLeft
+        self.calc_joint(3, self.laban2vec(laban, "head")  )                  # neck->head
+        self.calc_joint(4,  [5,3,0])                 # spineShoulder->shoulderLeft
 
         vec = self.laban2vec(laban, "left elbow")       # shoulderLeft->elbowLeft
         self.calc_joint(5,vec)
@@ -569,7 +596,7 @@ class graph3D:
         self.calc_joint(6,vec)
 
         self.calc_joint(7, [0,0,0])                     # wristLeft->handLeft
-        self.calc_joint(8, [-4,-0.5,0])                 # spineShoulder->shoulderRight
+        self.calc_joint(8, [-5,3,0])                 # spineShoulder->shoulderRight
 
         vec = self.laban2vec(laban, "right elbow")      # shoulderRight->elbowRight
         self.calc_joint(9,vec)
@@ -578,11 +605,11 @@ class graph3D:
         self.calc_joint(10,vec)
 
         self.calc_joint(11, [0,0,0])                    # wristLeft->handLeft
-        self.calc_joint(12, [1.5,-0, 0.5])              # spineBase->hipLeft
+        self.calc_joint(12, [2,-2, 0.5])              # spineBase->hipLeft
         # self.calc_joint(13, [0,-6,0])                   # hipLeft->kneeLeft
         # self.calc_joint(14, [0,-7,0])                   # kneeLeft->ankleLeft
         # self.calc_joint(15, [0.2,-0.2,3])               # ankleLeft->footLeft
-        self.calc_joint(16, [-1.5,-0, 0.5])             # spineBase->hipRight
+        self.calc_joint(16, [-2,-2, 0.5])             # spineBase->hipRight
         # self.calc_joint(17, [0,-6,0])                   # hipRight->kneeRight
         # self.calc_joint(18, [0,-7,0])                   # kneeRight->ankleRight
         # self.calc_joint(19, [-0.2,-0.2,3])              # ankleRight->footRight
@@ -605,27 +632,33 @@ class graph3D:
 
     #------------------------------------------------------------------------------
     # convert the labanotation for a given limb to a vector
-    #
     def laban2vec(self, laban, limb):
         theta = 175
         phi = 0
+        limb_length = 10
         pi = 3.1415926
-        for i in range(0, len(laban)):
+        
+        support=False
+        for i in range(len(laban)):
             laban[i] = laban[i].lower()
-            tmp_str = laban[i].split(":")
-            if tmp_str[0]==limb:
-                lv = tmp_str[2]
-                if lv == "high":
+            tmp = laban[i].split(":")
+            if tmp[0] == limb:
+                if " o" in tmp[2]:
+                    support=True
+                level = tmp[2].replace(' o', '')  # remove support marker
+                if level == "high":
                     theta = 45
-                elif lv == "normal":
+                elif level == "normal":
                     theta = 90
-                elif lv == "low":
+                elif level == "low":
                     theta = 135
+                elif "place" in level:
+                    theta = 180 if "low" in level else 5
                 else:
                     theta = 180
                     print('Unknown Level.')
                     
-                dire = tmp_str[1]
+                dire = tmp[1]
                 if dire == "forward":
                     phi = 0
                 elif dire == "right forward":
@@ -643,10 +676,10 @@ class graph3D:
                 elif dire == "left forward":
                     phi = 45
                 elif dire == "place":
-                    if lv == "high":
+                    if level == "high":
                         theta = 5
                         phi = 0
-                    elif lv == "low":
+                    elif level == "low":
                         theta = 175
                         phi = 0
                     else:
@@ -657,6 +690,21 @@ class graph3D:
                     phi = 0
                     print('Unknown Direction.')
                 break
+        if "knee" in limb:
+            theta-=5
+            if not support:
+                theta-=5
+        if "ankle" in limb:
+            theta+=20
+        if  "wrist" in limb:
+            theta-=10
+
+        y = limb_length * math.cos(math.radians(theta))
+        x = limb_length * math.sin(math.radians(theta)) * math.sin(math.radians(phi))
+        z = limb_length * math.sin(math.radians(theta)) * math.cos(math.radians(phi))
+
+        return [x, y, z]
+
 
         # ✅ **4️⃣ Convert to Cartesian Coordinates**
         limb_length=5

@@ -51,12 +51,13 @@ bType = np.dtype({'names':[ 'timeS',                # milliseconds
 #------------------------------------------------------------------------------
 # AMASS Joint Mapping to Kinect Body Format
 AMASS_TO_KINECT_MAP = {
-    "spineB": 0, "spineM": 3, "spineS": 6, "neck": 12, "head": 15,
-    "shoulderL": 13, "elbowL": 18, "wristL": 20, "handL": 22,  # Left arm
-    "shoulderR": 14, "elbowR": 19, "wristR": 21, "handR": 37,  # Right arm
+    "spineB": 0, "spineM": 3,
+    "neck": 12, "head": 15,
+    "shoulderL": 16, "elbowL": 18, "wristL": 20, "handL": 22,  # Left arm
+    "shoulderR": 17, "elbowR": 19, "wristR": 21, "handR": 37,  # Right arm
     "hipL": 1, "kneeL": 4, "ankleL": 7, "footL": 10,  # Left leg
     "hipR": 2, "kneeR": 5, "ankleR": 8, "footR": 11,  # Right leg
-    "handTL": 34, "thumbL": 35, "handTR": 49, "thumbR": 50  # Hands
+    "spineS": 6,"handTL": 34, "thumbL": 35, "handTR": 49, "thumbR": 50  # Hands
 }
 # AMASS_TO_KINECT_MAP = {
 #     'spineB': 0, 'hipL': 1, 'hipR': 2, 'spineM': 3,
@@ -170,107 +171,154 @@ jType = np.dtype({'names': ['x', 'y', 'z', 'ts'], 'formats': [float, float, floa
 # a body
 bType = np.dtype({'names':[ 'timeS',                # milliseconds
                             'filled',               # filled gap
-                            'T', 'R',
                             'spineB', 'spineM',     # meter
                             'neck', 'head',
                             'shoulderL', 'elbowL', 'wristL', 'handL', # tracked=2, inferred=1, nottracked=0
                             'shoulderR', 'elbowR', 'wristR', 'handR',
                             'hipL', 'kneeL', 'ankleL', 'footL',
                             'hipR', 'kneeR', 'ankleR', 'footR',
-                            'spineS', 'handTL', 'thumbL', 'handTR', 'thumbR'],
+                            'spineS', 'handTL', 'thumbL', 'handTR', 'thumbR', 
+                            'T', 'R',
+                            ],
                 'formats':[ int,
                             bool,
-                            (float, 3), (float, 3),
                             jType, jType,
                             jType, jType,
                             jType, jType, jType, jType,
                             jType, jType, jType, jType,
                             jType, jType, jType, jType,
                             jType, jType, jType, jType,
-                            jType, jType, jType, jType, jType]})
+                            jType, jType, jType, jType, jType,
+                            (float, 3), (float, 3)]})
 # **AMASS to Kinect Joint Mapping**
 
-def loadAMASSData(filePath, fps=30):
+from scipy.spatial.transform import Rotation as Rscipy
+import numpy as np
+from tqdm import tqdm
+import torch
+import numpy as np
+import torch
+from tqdm import tqdm
+from scipy.spatial.transform import Rotation as Rscipy
+
+def convert_to_kinect_coords(joint_positions, trans, rot):
     """
-    Loads AMASS motion data and converts it to Kinect-compatible format.
+    Converts AMASS coordinate system (Y-up) to Kinect coordinate system (Z-up).
+    
+    Args:
+        joint_positions (np.array): (N, 52, 3) global joint positions.
+        trans (np.array): (N, 3) global translations.
+        rot (np.array): (N, 3) global rotations in Euler angles.
+
+    Returns:
+        joint_positions, trans, rot transformed to Kinect format.
+    """
+    num_frames = joint_positions.shape[0]
+
+    # ✅ Swap Y & Z axes for Kinect format (Z-up)
+    joint_positions[:, :, [1, 2]] = joint_positions[:, :, [2, 1]]  
+    joint_positions[:, :, 1] *= -1  # Keep Z positive
+
+    trans[:, [1, 2]] = trans[:, [2, 1]]
+    trans[:, 1] *= -1  # Keep Z positive
+
+    # ✅ Convert Euler angles to match Kinect system
+    for i in range(num_frames):
+        r = Rscipy.from_euler('xyz', rot[i], degrees=False).as_matrix()
+        r_kinect = r[:, [0, 2, 1]] * np.array([1, 1, -1])  # Reorder axes
+        rot[i] = Rscipy.from_matrix(r_kinect).as_euler('xyz', degrees=False)  
+
+    return joint_positions, trans, rot
+
+def loadAMASSData(filePath, fps=30, device='cpu'):
+    """
+    Loads AMASS motion data and converts it to Kinect-compatible format using PyTorch optimizations.
     
     Args:
         filePath (str): Path to the AMASS dataset (.pt).
-        model_path (str): Path to SMPL(-H) model to compute global positions.
         fps (int): Frames per second (default is 30).
+        device (str): Computation device ('cpu' or 'cuda').
         
     Returns:
         List of Kinect-compatible motion frames.
     """
-    # if not os.path.exists(filePath):
-    #     raise FileNotFoundError(f"Dataset not found: {filePath}")
-
-    # Load AMASS dataset
-    device="cpu"
-    
-    support_dir = Path(filePath).resolve().parents[4]  # Go up 4 levels
-    model_path=os.path.join(support_dir, 'body_models/smplh/male/model.npz')
-    # Load SMPL-H Model for Forward Kinematics
-    bm = BodyModel(bm_fname=model_path, num_betas=16)
-    # ✅ Load AMASS dataset
+    # ✅ Load dataset
     ds = torch.load(filePath)
     
+    # ✅ Load SMPL-H Model
+    support_dir = Path(filePath).resolve().parents[4]  # Adjust for correct model path
+    model_path = os.path.join(support_dir, 'body_models/smplh/male/model.npz')
+    bm = BodyModel(bm_fname=model_path, num_betas=16).to(device)
+
+    # ✅ Convert pose, translation & betas into tensors (efficient batch processing)
+    pose_torch = torch.tensor(ds['pose'], dtype=torch.float32, device=device)  # (N, 156)
+    trans_torch = torch.tensor(ds['trans'], dtype=torch.float32, device=device)  # (N, 3)
+    betas_torch = torch.tensor(ds['betas'][:16], dtype=torch.float32, device=device).reshape(1, -1)  # Ensure (1, 16)
+
+    num_frames = pose_torch.shape[0]
+    
+    # ✅ Extract root orientation and body pose
+    root_orient = pose_torch[:, :3]  # (N, 3)  -> Euler angles (axis-angle)
+    pose_body = pose_torch[:, 3:66]  # (N, 63)
+
+    # ✅ Compute global joint positions in batch
+    smpl_output = bm(pose_body=pose_body,
+                     root_orient=root_orient,
+                     trans=trans_torch)
+
+    joint_positions = smpl_output.Jtr  # (N, 52, 3)
+
+    # ✅ Convert results to numpy (batch processing)
+    joint_positions_np = joint_positions.cpu().numpy()  # (N, 52, 3)
+    trans_np = trans_torch.cpu().numpy()  # (N, 3)
+    root_np = root_orient.cpu().numpy()  # (N, 3)  ✅ Kept in Euler angles
+
+    # ✅ Convert to Kinect Coordinate System BEFORE setting relative translation
+    joint_positions_np, trans_np, root_np = convert_to_kinect_coords(joint_positions_np, trans_np, root_np)
+
+    # ✅ Set first frame translation to zero (relative)
+    trans_orig = trans_np[0].copy()
+    trans_np -= trans_orig
+
+    # ✅ Keep root rotation relative to first frame
+    root_orig = root_np[0].copy()
+    relative_root_np = root_np - root_orig  # ✅ Euler angles remain relative
+    rotation_matrix = Rscipy.from_euler('xyz', root_orig, degrees=False).as_matrix()  # (3,3)
+
+
+    # ✅ Convert batch data into motion_data format
     motion_data = []
     start_time = 0
 
-    # ✅ Initialize the first frame's reference
-    trans_orig = None
-    root_orig = None
-    
-    for idx in tqdm(range(len(ds['pose']))):
+    for idx in tqdm(range(min(num_frames, 1000)), desc="Processing Frames"):
         tempBody = np.zeros(1, dtype=bType)
-        tempBody['filled'] = False  # No missing data for now
-        
+        tempBody['filled'] = False
+
         if idx == 0:
-            tempBody['timeS'] = 1
-            start_time = idx * (1000 / fps)  # Convert frame index to milliseconds
+            tempBody['timeS'] = 0
+            start_time = idx * (1000 / fps)
         else:
             tempBody['timeS'] = int(start_time + (idx * (1000 / fps)))
 
-        # Extract joint rotations & translation
-        
-        pose = ds['pose'][idx]  # Convert pose to (52, 3)
-        trans = ds['trans'][idx]  # Global translation
-        root_orient = torch.tensor(pose[:3], dtype=torch.float32).to(device)  # Root orientation
-        pose_body = torch.tensor(pose[3:66], dtype=torch.float32).to(device)  # Body pose (excluding root)
-        betas = torch.tensor(ds['betas'][idx][:16], dtype=torch.float32).to(device)  # Shape params
-        if idx == 0:
-            trans_orig = trans.detach().cpu().numpy()
-            root_orig = root_orient.detach().cpu().numpy()
-        
-        relative_trans = trans.detach().cpu().numpy() - trans_orig
-        relative_root = root_orient.detach().cpu().numpy() - root_orig
-
-        
-        # Convert AMASS Pose to SMPL Global Positions (Forward Kinematics)
-        smpl_output = bm(pose_body=pose_body.unsqueeze(0),
-                        root_orient=torch.tensor(relative_root).unsqueeze(0).to(device),
-                        trans=torch.tensor(relative_trans).unsqueeze(0).to(device),
-                        betas=betas.unsqueeze(0))
-
-        joint_positions = smpl_output.Jtr.detach().cpu().numpy()[0]  # Global joint positions
-
-        # Map AMASS Joints to Kinect Format
+        # ✅ Store joint positions in Kinect format
         for kinect_joint, amass_idx in AMASS_TO_KINECT_MAP.items():
             tempPoint = np.zeros(1, dtype=jType)
-            tempPoint['x'], tempPoint['y'], tempPoint['z'] = joint_positions[amass_idx]
+            tempPoint['x'], tempPoint['y'], tempPoint['z'] =  rotation_matrix @ joint_positions_np[idx, amass_idx] #+ trans_orig   # Corrected Coordinates
             tempPoint['ts'] = 2  # Fully tracked
-            # tempPoint['T'] = relative_trans  # Store global translation
-            # tempPoint['R'] = relative_root   # Store global rotation
-
+            
             tempBody[0][kinect_joint] = tempPoint
 
+        tempBody[0]['T'] = trans_np[idx]  # ✅ Store transformed global translation
+        tempBody[0]['R'] = relative_root_np[idx]   # ✅ Store transformed global rotation (Euler)
+
         motion_data.append(tempBody)
-    
+
+    # ✅ Visualize 5 frames
     # plot_skeleton(motion_data, num_frames=5)
 
-    
     return motion_data
+
+
 # def loadAMASSData(filePath, fps=30, device='cpu'):
 #     """
 #     Loads AMASS motion data and converts it to Kinect-compatible format using PyTorch optimizations.
@@ -312,14 +360,17 @@ def loadAMASSData(filePath, fps=30):
 
 #     # ✅ Compute global joint positions in batch
 #     smpl_output = bm(pose_body=pose_body,
-#                      root_orient=relative_root,
-#                      trans=relative_trans)
+#                      root_orient=root_orient,
+#                      trans=trans_torch)
 #                     #  betas=betas_torch.expand(num_frames, -1))
 
 #     joint_positions = smpl_output.Jtr  # (N, 52, 3)
 
+    
 #     # ✅ Convert results to numpy (batch processing)
-#     joint_positions_np = joint_positions.cpu().numpy()
+#     joint_positions_np = joint_positions.cpu().numpy() 
+#     rotation_matrix = Rscipy.from_euler('xyz', root_orig, degrees=False).as_matrix()
+
 #     relative_trans_np = relative_trans.cpu().numpy()
 #     relative_root_np = relative_root.cpu().numpy()
 
@@ -340,7 +391,7 @@ def loadAMASSData(filePath, fps=30):
 #         # ✅ Store joint positions in Kinect format
 #         for kinect_joint, amass_idx in AMASS_TO_KINECT_MAP.items():
 #             tempPoint = np.zeros(1, dtype=jType)
-#             tempPoint['x'], tempPoint['y'], tempPoint['z'] = 100*joint_positions_np[idx, amass_idx]
+#             tempPoint['x'], tempPoint['y'], tempPoint['z'] =  joint_positions_np[idx, amass_idx] 
 #             tempPoint['ts'] = 2  # Fully tracked
            
 #             tempBody[0][kinect_joint] = tempPoint
@@ -375,7 +426,7 @@ def apply_transformation(joint_positions, T, R):
     for joint, pos in joint_positions.items():
         pos = np.array(pos).reshape(3, 1)  # Ensure it's column vector
         rotated_pos = rotation_matrix @ pos  # Apply rotation
-        transformed_positions[joint] = (rotated_pos.flatten() + T).tolist()[0]  # Apply translation
+        transformed_positions[joint] = (rotated_pos.flatten() ).tolist()  # Apply translation
 
     return transformed_positions
 
@@ -403,11 +454,11 @@ def plot_skeleton(frames, num_frames=4):
 
     for i in range(num_frames):
         ax = fig.add_subplot(1, num_frames, i + 1, projection='3d')
-        frame = frames[i*25]
+        frame = frames[10*i]
         
         # Use structured array indexing (original approach)
         joint_positions = {joint: (frame[joint]['x'], frame[joint]['y'], frame[joint]['z']) 
-                            for joint in frame.dtype.names[4:]}
+                            for joint in frame.dtype.names[2:-2]}
         T = frame['T']  # Global translation
         R = frame['R']  # Global rotation
     
@@ -422,7 +473,7 @@ def plot_skeleton(frames, num_frames=4):
         # Convert coordinate system (swap Y-Z, invert Z)
         for joint in joint_positions_transformed:
             x, y, z = joint_positions_transformed[joint]
-            joint_positions_transformed[joint] = [x, -z, y]
+            joint_positions_transformed[joint] = [x, y, z]
 
         # Plot skeleton connections
         for joint_start, joint_end in skeleton_connections:
@@ -438,13 +489,13 @@ def plot_skeleton(frames, num_frames=4):
             # ax.text(pos[0], pos[1], pos[2], joint, fontsize=6, color='red')
 
         ax.set_xlim([-1, 1])
-        ax.set_ylim([-1, 1])
+        ax.set_ylim([0, 2])
         ax.set_zlim([0, 2])  # Upright visualization
 
         ax.set_xlabel('X')
         ax.set_ylabel('Y')
         ax.set_zlabel('Z')
-        ax.view_init(elev=15, azim=60)
+        ax.view_init(elev=90, azim=-90)
         ax.set_title(f'Frame {i*5}')
 
     plt.show()
