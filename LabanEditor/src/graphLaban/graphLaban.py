@@ -180,7 +180,7 @@ class graphLaban:
         filePath = settings.checkFileAlreadyExists(filePath, fileExt=".png", fileTypes=[('png files', '.png'), ('all files', '.*')])
         if (filePath is None):
             return
-
+        print(filePath)
         try:
             cv2.imwrite(filePath, self.view.img)
 
@@ -196,8 +196,8 @@ class graphLaban:
 
         script = settings.application.labanotation.labanToScript(timeS, all_laban)
 
-        s = 60
-        self.view = settings.application.labanotation.labanScriptToImage(s * 10, s * cnt, script)
+        s = 100
+        self.view = settings.application.labanotation.labanScriptToImage(s * 10, int(s * cnt//10), script)
 
         if (self.im != None):
             self.ax.images.remove(self.im)

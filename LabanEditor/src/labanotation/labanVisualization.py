@@ -182,7 +182,7 @@ class convertLabanScriptToView:
         i = 0
         while True:
             x1 = int(self.unit * 6 - 3)
-            x2 = int(self.unit * 6 + 3)
+            x2 = int(self.unit * 6 + 2)
             y = int(floor - i * self.scale)
             if y < 0:
                 break
@@ -195,18 +195,18 @@ class convertLabanScriptToView:
         title = self.height - 20
 
         labels = [
-            'L Elbow', 'L Wrist', 'L Body', 'L Ankle', 'L Foot', 'L Support',
-            'R Support', 'R Foot', 'R Ankle', 'R Body', 'R Wrist', 'R Elbow', 'Head'
+            'ElbowL', 'WristL', 'BodyL', 'AnkleL', 'FootL', 'SupportL',
+            'SupportR', 'FootR', 'AnkleR', 'BodyR', 'WristR', 'ElbowR', ' Head'
         ]
 
-        alignments = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, -10]  # text x-offsets
+        alignments = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]  # text x-offsets
 
         for i in range(13):
             x = self.unit * i + alignments[i]
-            cv2.putText(self.img, labels[i], (x, title), font, 0.4, 1, 2)
+            cv2.putText(self.img, labels[i], (x, title), font, 0.5, 1, 2)
 
         # Name label
-        cv2.putText(self.img, self.name, (self.unit * 3 + 10, self.height - 35), font, 0.8, 1, 2)
+        cv2.putText(self.img, self.name, (self.unit * 3 + 30, self.height - 40), font, 1.2, 1, 1)
 
     #------------------------------------------------------------------------------
     # draw sign of Labanotation.
@@ -225,10 +225,10 @@ class convertLabanScriptToView:
         
         (time1,time2) = timeTuple
         unit = self.width/13
-        x1 = int((cell-1)*unit+7)#left top corner
+        x1 = int((cell-1)*unit+5)#left top corner
         x2 = int(cell*unit-5)
-        y1 = int(self.height-self.bottom-int(time2*self.scale)+5)#right bottom corner
-        y2 = int(self.height-self.bottom-int(time1*self.scale)-5)
+        y1 = int(self.height-self.bottom-int(time2*self.scale*15)+5)#right bottom corner
+        y2 = int(self.height-self.bottom-int(time1*self.scale*15)-5)
         support= (' o' in lv)
         lv=lv.replace(' o', '')
         #shading: pattern/black/dot
@@ -323,14 +323,17 @@ class convertLabanScriptToView:
         if support:
             center_x = int((x1 + x2) / 2)
             center_y = int(y1 - 2)  # small offset above the symbol
-            cv2.circle(self.img, (center_x, center_y), 4, (0, 0, 0), -1)
+            cv2.circle(self.img, (center_x, center_y), 5, (0, 0, 0), thickness=2)
+
+            # Then draw a smaller white filled circle on top
+            cv2.circle(self.img, (center_x, center_y), 4, (255, 255, 255), thickness=-1)
     #------------------------------------------------------------------------------
     # draw one column of labanotation for one limb
     # 
     def draw_limb(self,cell,side,laban):
-        self.sign(cell,(-90.0/self.scale,-5.0/self.scale),side,laban[0][1],laban[0][2])
+        self.sign(cell,(-90.0/(15*self.scale),-5.0/(15*self.scale)),side,laban[0][1],laban[0][2])
         i=1
-        k=1
+        k=0
         while i <= self.cnt-1:
             if laban[i-1][1]==laban[i][1] and laban[i-1][2]==laban[i][2]:
                 pass

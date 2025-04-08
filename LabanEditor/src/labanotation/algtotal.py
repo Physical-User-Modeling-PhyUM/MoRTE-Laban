@@ -265,16 +265,19 @@ class Algorithm:
 
             # ✅ Convert joints to spherical coordinates
             (elR[i], elL[i], wrR[i], wrL[i], 
-            knR[i], knL[i], anR[i], anL[i], fR[i],fL[i], head[i], shR[i], shL[i],torso[i]) = lp.raw2sphere(
+            knR[i], knL[i], anR[i], anL[i], fR[i],fL[i], head[i], torso[i],shR[i], shL[i]) = lp.raw2sphere(
                 self.jointFrames[i], base_rotation=base_rotation, base_translation=base_translation
             )
 
         # ✅ Convert to Labanotation
         self.unfilteredLaban = []
-        footL_y = self.jointFrames[i]["footL"][0][1]
-        footR_y = self.jointFrames[i]["footR"][0][1]
+        footL_y = self.jointFrames[0]["footL"][0][1]
+        footR_y = self.jointFrames[0]["footR"][0][1]
         base_foot=min(footL_y, footR_y)
+        #Todo modify ankels and foots
         for i in range(cnt):
+            if i==300:
+                print("j")
             support_type, rotation, base_translation_partial, base_rotation_partial = lp.detect_weight_support(self.jointFrames, i, base_translation_partial, base_rotation_partial, base_foot)
             # ✅ Convert Joints to Labanotation
             self.unfilteredLaban.append([

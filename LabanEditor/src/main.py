@@ -377,7 +377,7 @@ class application:
                 forceReset = True
             else:
                 self.logMessage("Error: The file '" + str(file) + "' is not a valid file.")
-                messageBox.showerror("Labanotation", "The file '" + str(file) + "' is not a valid file.", parent=settings.tkGuiCanvas)
+                messagebox.showerror("Labanotation", "The file '" + str(file) + "' is not a valid file.", parent=settings.tkGuiCanvas)
                 return
 
         # load Kinect capture data
@@ -398,11 +398,12 @@ class application:
         # apply selected algorithm
         self.applyAlgoritm(self.algorithm, forceReset)
 
-        if False:#(self.fShowGUI):
+        if (self.fShowGUI):
             # render skeleton(s) at time 0
             self.selectTime(0)
         else:
             print("Saving json")
+            self.saveImage()
             # write to file
             self.saveJSON()
 

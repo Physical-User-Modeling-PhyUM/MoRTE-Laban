@@ -54,7 +54,8 @@ class graph3D:
                                 jType, jType, jType, jType,
                                 jType, jType, jType, jType,
                                 jType, jType, jType, jType, jType]})
-
+    sq_error=[]
+    limb_lenghts=[]
     isInterpolatedKeyFrame = False
     annSelection = None
 
@@ -361,7 +362,7 @@ class graph3D:
                      self.annSelection.remove()
 
                 color = 'green'
-                time = time / 1000.0
+                time = time / 100.0
                 self.annSelection = self.axFrameBlocks2.annotate('', xy=(time, 0.0), xytext=(time, -0.5),
                     weight='bold', color=color,
                     arrowprops=dict(arrowstyle='wedge', connectionstyle="arc3", color=color))
@@ -583,10 +584,10 @@ class graph3D:
     # convert labanotation to joint points
     #
     def mapLabanotation2Joints(self, laban):
-        self.calc_joint(1,  np.array(self.laban2vec(laban, "torso"))*[0.3,0.8,0.3])                  # spineBase->spineMid
+        self.calc_joint(1,  [0, 6, 0])                  # spineBase->spineMid
         self.calc_joint(20, np.array(self.laban2vec(laban, "torso"))* [0.3,0.6,0.3])                 # spineMid->spineShoulder
-        self.calc_joint(2,  [0, 2, 0])                  # spineShoulder->neck
-        self.calc_joint(3, self.laban2vec(laban, "head")  )                  # neck->head
+        self.calc_joint(2,  [0, 5, 0])                  # spineShoulder->neck
+        self.calc_joint(3, np.array(self.laban2vec(laban, "head"))*0.5  )                  # neck->head
         self.calc_joint(4,  [5,3,0])                 # spineShoulder->shoulderLeft
 
         vec = self.laban2vec(laban, "left elbow")       # shoulderLeft->elbowLeft
@@ -615,13 +616,13 @@ class graph3D:
         # self.calc_joint(19, [-0.2,-0.2,3])              # ankleRight->footRight
 
         # # Adjust knees and feet based on labanotation symbols
-        self.calc_joint(13, self.laban2vec(laban, "left knee"))  # hipLeft -> kneeLeft
+        self.calc_joint(13, np.array(self.laban2vec(laban, "left knee")))  # hipLeft -> kneeLeft
         self.calc_joint(14, self.laban2vec(laban, "left ankle"))  # kneeLeft -> ankleLeft
-        self.calc_joint(15, self.laban2vec(laban, "left foot"))  # ankleLeft -> footLeft
+        self.calc_joint(15, np.array(self.laban2vec(laban, "left foot"))*0.5)  # ankleLeft -> footLeft
 
-        self.calc_joint(17, self.laban2vec(laban, "right knee"))  # hipRight -> kneeRight
+        self.calc_joint(17, np.array(self.laban2vec(laban, "right knee")))  # hipRight -> kneeRight
         self.calc_joint(18, self.laban2vec(laban, "right ankle"))  # kneeRight -> ankleRight
-        self.calc_joint(19, self.laban2vec(laban, "right foot"))  # ankleRight -> footRight
+        self.calc_joint(19, np.array(self.laban2vec(laban, "right foot"))*0.5)  # ankleRight -> footRight
     #------------------------------------------------------------------------------
     # calculate the given joint using its parent joint and a vector
     #
@@ -645,20 +646,27 @@ class graph3D:
             if tmp[0] == limb:
                 if " o" in tmp[2]:
                     support=True
-                level = tmp[2].replace(' o', '')  # remove support marker
+                dire = tmp[1]
+                level = tmp[2]  # remove support marker
                 if level == "high":
                     theta = 45
                 elif level == "normal":
                     theta = 90
                 elif level == "low":
                     theta = 135
-                elif "place" in level:
-                    theta = 180 if "low" in level else 5
+                elif level == "high o":
+                    theta = 180
+                elif level == "normal o":
+                    theta = 135
+                elif level == "low o":
+                    theta = 90
+                # elif dire=="place" and not (i in [7,8]):
+                #     theta = 180 if "low" in level else 5 
                 else:
                     theta = 180
                     print('Unknown Level.')
                     
-                dire = tmp[1]
+                
                 if dire == "forward":
                     phi = 0
                 elif dire == "right forward":
@@ -675,29 +683,14 @@ class graph3D:
                     phi = 90
                 elif dire == "left forward":
                     phi = 45
-                elif dire == "place":
-                    if level == "high":
-                        theta = 5
-                        phi = 0
-                    elif level == "low":
-                        theta = 175
-                        phi = 0
-                    else:
-                        theta = 180
-                        phi = 0
-                        print('Unknown Place')
+                elif dire=="place":
+                    phi = 0
+                    if not (i in [7,8]):
+                        theta = 180 if "low" in level else 5 
                 else:
                     phi = 0
                     print('Unknown Direction.')
                 break
-        if "knee" in limb:
-            theta-=5
-            if not support:
-                theta-=5
-        if "ankle" in limb:
-            theta+=20
-        if  "wrist" in limb:
-            theta-=10
 
         y = limb_length * math.cos(math.radians(theta))
         x = limb_length * math.sin(math.radians(theta)) * math.sin(math.radians(phi))
@@ -706,13 +699,6 @@ class graph3D:
         return [x, y, z]
 
 
-        # ✅ **4️⃣ Convert to Cartesian Coordinates**
-        limb_length=5
-        y = limb_length * math.cos(math.radians(theta))
-        x = limb_length * math.sin(math.radians(theta)) * math.sin(math.radians(phi))
-        z = limb_length * math.sin(math.radians(theta)) * math.cos(math.radians(phi))
-
-        return [x, y, z]
 
 
 

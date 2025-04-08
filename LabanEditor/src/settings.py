@@ -190,7 +190,7 @@ def checkFileAlreadyExists(filePath, fileExt=".txt", fileTypes=[('text files', '
     if (not os.path.isfile(filePath)):
         return filePath
 
-    result = messageBox.askyesnocancel("Labanotation", "The file '" + filePath + "' already exists.\r\n\r\n\tChoose 'Yes' to overwrite.\r\n\tChoose 'No' to choose a new file name.\r\n\tChoose 'Cancel' to cancel.\r\n", **options)
+    result = messagebox.askyesnocancel("Labanotation", "The file '" + filePath + "' already exists.\r\n\r\n\tChoose 'Yes' to overwrite.\r\n\tChoose 'No' to choose a new file name.\r\n\tChoose 'Cancel' to cancel.\r\n", **options)
     if (result is True):
         return filePath
     elif (result is None):

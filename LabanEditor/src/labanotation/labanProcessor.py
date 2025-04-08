@@ -63,7 +63,7 @@ def calculate_base_rotation(joint):
     # 1. normal vector of plane defined by shoulderR, shoulderL and spineM
     sh = np.zeros((3,3))
     v1 = shL-shR
-    v2 = spM-shR
+    v2 = [0,-1,0]# spM-shR
     sh[0] = np.cross(v2,v1)#x axis
     sh[1] = v1#y axis
     sh[2] = np.cross(sh[0],sh[1])#z axis
@@ -252,8 +252,8 @@ def raw2sphere(joint, base_rotation=None, base_translation=None):
     }
 
     # ✅ **Compute Spherical Coordinates Using Local Transformations**
-    conv = calculate_base_rotation(joint)
-    spherical_coords = [ to_sphere(np.dot(conv.T, joints[joint] - joints[parent_relations[joint]]))
+    conv = calculate_base_rotation(joint) # Rscipy.from_euler('xyz', base_rotation, degrees=False).as_matrix() if (base_rotation is not None) else calculate_base_rotation(joint)
+    spherical_coords = [ to_sphere(np.dot(conv.T, (joints[joint] - joints[parent_relations[joint]])))
         for joint in parent_relations]
 
     return spherical_coords
@@ -276,24 +276,25 @@ def coordinate2laban(theta, phi, joint_type, support_data=None, support=True):
     
     #find direction, phi, (-180,180]
     #forward
-    if joint_type!="support":#"arm" or "leg" or "head" of "foot":
-        if (phi <= 22.5 and phi >= 0) or (phi < 0 and phi > -22.5):
-            laban[0] = 'Forward'
-        elif (phi <= 67.5 and phi > 22.5):
-            laban[0] = 'Left Forward'
-        elif (phi <= 112.5 and phi > 67.5):
-            laban[0] = 'Left'
-        elif (phi <= 135 and phi > 112.5):
-            laban[0] = 'Left Backward'
-        elif (phi <= -135 and phi > -180) or (phi <= 180 and phi > 135):
-            laban[0] = 'Backward'
-        elif (phi <= -112.5 and phi > -135):
-            laban[0] = 'Right Backward'
-        elif (phi <= -67.5 and phi > -112.5):
-            laban[0] = 'Right'
-        else:
-            laban[0] = 'Right Forward'
-        # find height, theta, [0,180]
+    # if joint_type!="support" or not support:#"arm" or "leg" or "head" of "foot":
+    if (phi <= 22.5 and phi >= 0) or (phi < 0 and phi > -22.5):
+        laban[0] = 'Forward'
+    elif (phi <= 67.5 and phi > 22.5):
+        laban[0] = 'Left Forward'
+    elif (phi <= 112.5 and phi > 67.5):
+        laban[0] = 'Left'
+    elif (phi <= 157.5 and phi > 112.5):
+        laban[0] = 'Left Backward'
+    elif (phi <= -157.5 and phi > -180) or (phi <= 180 and phi > 157.5):
+        laban[0] = 'Backward'
+    elif (phi <= -112.5 and phi > -157.5):
+        laban[0] = 'Right Backward'
+    elif (phi <= -67.5 and phi > -112.5):
+        laban[0] = 'Right'
+    else:
+        laban[0] = 'Right Forward'
+
+    if joint_type!="support" and joint_type!="torso" :
         # place high
         if theta < 22.5:
              laban=['Place','High']
@@ -304,17 +305,43 @@ def coordinate2laban(theta, phi, joint_type, support_data=None, support=True):
         elif theta < 112.5: 
             laban[1] = 'Normal'
         # low
-        elif theta < 130:
+        elif theta < 157.5:
             laban[1] = 'Low'
         # place low
         else:
             laban = ['Place','Low']
+        
+        if joint_type!="body":
+            # place high
+            if theta < 15:
+                laban=['Place','High']
+            # high
+            elif theta < 30:
+                laban[1] = 'High'
+            # normal/mid
+            elif theta < 67.5: 
+                laban[1] = 'Normal'
+            # low
+            elif theta <  112.5:
+                laban[1] = 'Low'
+            # place low
             
         
     if joint_type=="support":
         direction, support_type =support_data
-        laban[0]=direction
-        if support_type=="Jump":
+        if support: 
+            if theta < 90:
+               laban[1] = 'Low o'
+            # normal/mid
+            elif theta < 120:  
+                laban[1] = 'Normal o'
+            # low
+            else:
+                laban[1] = 'High o'
+        else:
+            
+            # laban[0]=direction
+            
             # high
             if theta < 67.5:
                 laban[1] = 'High'
@@ -324,15 +351,7 @@ def coordinate2laban(theta, phi, joint_type, support_data=None, support=True):
             # low
             else:
                 laban[1] = 'Low'
-        if (support_type=="Step" and support) or support_type=="Stand":
-            if theta < 67.5:
-               laban[1] = 'High o'
-            # normal/mid
-            elif theta < 112.5: 
-                laban[1] = 'Normal o'
-            # low
-            else:
-                laban[1] = 'Low o'
+        
     
     return laban
 
@@ -404,9 +423,9 @@ def detect_weight_support(jointFrames, i, base_translation_partial, base_rotatio
         support_type[2]= "Both"
         
     elif ground_contact_L and not ground_contact_R:
-            support_type [1]= "Right"
+            support_type [2]= "Left"
     elif ground_contact_R and not ground_contact_L:
-            support_type [1]= "Left"
+            support_type [2]= "Right"
   
     angle_rot=min(np.rad2deg(delta_R), 360-np.rad2deg(delta_R) )// ROTATION_THRESHOLD 
     
