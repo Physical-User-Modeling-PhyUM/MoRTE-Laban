@@ -1,0 +1,3 @@
+[submodule "LabanotationSuite"]
+	path = LabanotationSuite
+	url = https://github.com/rperezm97/LabanotationSuite.git
