@@ -1,1 +1,0 @@
-ToDo: graphSkeleton description

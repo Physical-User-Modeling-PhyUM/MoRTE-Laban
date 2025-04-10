@@ -1,0 +1,5937 @@
+{
+  "0005_2FeetJump001": {
+    "Position0": {
+      "start time": [
+        "17"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position1": {
+      "start time": [
+        "34"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position2": {
+      "start time": [
+        "59"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position3": {
+      "start time": [
+        "84"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position4": {
+      "start time": [
+        "109"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position5": {
+      "start time": [
+        "134"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position6": {
+      "start time": [
+        "159"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position7": {
+      "start time": [
+        "176"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position8": {
+      "start time": [
+        "184"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position9": {
+      "start time": [
+        "201"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position10": {
+      "start time": [
+        "209"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position11": {
+      "start time": [
+        "226"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position12": {
+      "start time": [
+        "234"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position13": {
+      "start time": [
+        "251"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position14": {
+      "start time": [
+        "259"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position15": {
+      "start time": [
+        "276"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position16": {
+      "start time": [
+        "284"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position17": {
+      "start time": [
+        "301"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position18": {
+      "start time": [
+        "309"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position19": {
+      "start time": [
+        "326"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position20": {
+      "start time": [
+        "334"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position21": {
+      "start time": [
+        "351"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position22": {
+      "start time": [
+        "359"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position23": {
+      "start time": [
+        "376"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position24": {
+      "start time": [
+        "384"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position25": {
+      "start time": [
+        "401"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position26": {
+      "start time": [
+        "409"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position27": {
+      "start time": [
+        "417"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position28": {
+      "start time": [
+        "426"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position29": {
+      "start time": [
+        "434"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position30": {
+      "start time": [
+        "451"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position31": {
+      "start time": [
+        "459"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position32": {
+      "start time": [
+        "476"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position33": {
+      "start time": [
+        "484"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position34": {
+      "start time": [
+        "501"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position35": {
+      "start time": [
+        "526"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position36": {
+      "start time": [
+        "551"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position37": {
+      "start time": [
+        "567"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position38": {
+      "start time": [
+        "576"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position39": {
+      "start time": [
+        "584"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position40": {
+      "start time": [
+        "609"
+      ],
+      "duration": [
+        "-1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position41": {
+      "start time": [
+        "626"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position42": {
+      "start time": [
+        "634"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position43": {
+      "start time": [
+        "659"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position44": {
+      "start time": [
+        "667"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position45": {
+      "start time": [
+        "684"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position46": {
+      "start time": [
+        "709"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position47": {
+      "start time": [
+        "734"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position48": {
+      "start time": [
+        "759"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position49": {
+      "start time": [
+        "776"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position50": {
+      "start time": [
+        "784"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position51": {
+      "start time": [
+        "801"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Place",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Place",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position52": {
+      "start time": [
+        "809"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position53": {
+      "start time": [
+        "826"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "Low"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Right"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position54": {
+      "start time": [
+        "851"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Jump",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position55": {
+      "start time": [
+        "876"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position56": {
+      "start time": [
+        "901"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Place",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position57": {
+      "start time": [
+        "926"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position58": {
+      "start time": [
+        "951"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position59": {
+      "start time": [
+        "967"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position60": {
+      "start time": [
+        "976"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position61": {
+      "start time": [
+        "984"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position62": {
+      "start time": [
+        "1009"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position63": {
+      "start time": [
+        "1034"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left Backward",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position64": {
+      "start time": [
+        "1059"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position65": {
+      "start time": [
+        "1084"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position66": {
+      "start time": [
+        "1109"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Right Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Squat Down",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position67": {
+      "start time": [
+        "1134"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Squat Down",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position68": {
+      "start time": [
+        "1151"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Squat Down",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position69": {
+      "start time": [
+        "1159"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Squat Down",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position70": {
+      "start time": [
+        "1176"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Place",
+        "Low"
+      ],
+      "left foot": [
+        "Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Squat Down",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position71": {
+      "start time": [
+        "1184"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Place",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Place",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Squat Down",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position72": {
+      "start time": [
+        "1201"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Place",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Place",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Squat Down",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position73": {
+      "start time": [
+        "1226"
+      ],
+      "duration": [
+        "1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Right Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    },
+    "Position149": {
+      "start time": [
+        "1242"
+      ],
+      "duration": [
+        "-1"
+      ],
+      "left elbow": [
+        "Left",
+        "Low"
+      ],
+      "left wrist": [
+        "Left Forward",
+        "Low"
+      ],
+      "left body": [
+        "Forward",
+        "High"
+      ],
+      "left ankle": [
+        "Backward",
+        "Low"
+      ],
+      "left foot": [
+        "Left Forward",
+        "Low"
+      ],
+      "left knee": [
+        "Left Forward",
+        "High o"
+      ],
+      "right knee": [
+        "Forward",
+        "High o"
+      ],
+      "right foot": [
+        "Forward",
+        "Low"
+      ],
+      "right ankle": [
+        "Backward",
+        "Low"
+      ],
+      "right body": [
+        "Forward",
+        "High"
+      ],
+      "right wrist": [
+        "Right Forward",
+        "Low"
+      ],
+      "right elbow": [
+        "Right Backward",
+        "Low"
+      ],
+      "head": [
+        "Forward",
+        "Normal"
+      ],
+      "support": [
+        [
+          "Place",
+          "Stand",
+          "Both"
+        ]
+      ],
+      "rotation": [
+        "ToLeft",
+        0.0
+      ]
+    }
+  },
+  "energy_hands": [
+    -0.015701493849785343,
+    -0.015701493849785343,
+    0.2787003782428754,
+    0.17260878526764065,
+    0.4174311384168745,
+    0.2781764082490636,
+    -0.0032507216902638025,
+    0.4451443668084195,
+    0.0972573296091756,
+    -0.23758983391199237,
+    0.34027361482708623,
+    -0.18299487000979453,
+    -0.30894151228918754,
+    0.18747099604686152,
+    -0.433013798965391,
+    -0.2016495838684374,
+    0.061308293397557,
+    -0.588145197520859,
+    -0.11747524550943894,
+    -0.023513213735209926,
+    -0.6497674051252359,
+    -0.05058546534675995,
+    -0.07668501177110582,
+    -0.5998103189556354,
+    0.004177815857098088,
+    -0.10020504865901247,
+    -0.5053182855760276,
+    0.045204923747174774,
+    -0.08393649080502708,
+    -0.40292528733982896,
+    0.05989766085990811,
+    -0.022743629538351906,
+    -0.3182039546997397,
+    0.03784755374624149,
+    0.06070359033433931,
+    -0.2767773538415195,
+    -0.01780618312136073,
+    0.12514206636101688,
+    -0.2951155545821454,
+    -0.0815138275569911,
+    0.14162147620635096,
+    -0.3636414621023525,
+    -0.11622668917047513,
+    0.11314457035705999,
+    -0.44285494126678276,
+    -0.10941227487348171,
+    0.06950270068417147,
+    -0.4918132414671554,
+    -0.08464400133696964,
+    0.04158530489925971,
+    -0.5078372434422183,
+    -0.06862294265615149,
+    0.03405292727858711,
+    -0.5162595596983095,
+    -0.062494652935686845,
+    0.026515820774786758,
+    -0.5257347291268941,
+    -0.04257813238892438,
+    0.00282913699346532,
+    -0.5108953567532069,
+    0.014450477009008922,
+    -0.0234095147495732,
+    -0.43411997561328053,
+    0.10411130375689687,
+    -0.013837827070690034,
+    -0.29638275583955637,
+    0.18725750412104264,
+    0.05668779639865612,
+    -0.1530926803694475,
+    0.21748765718363539,
+    0.1698668589122529,
+    -0.06463164632464646,
+    0.17627333113172083,
+    0.28687133539102616,
+    -0.05472904080150243,
+    0.0711873657133319,
+    0.3771292791013399,
+    -0.1232553098388941,
+    -0.08023525228471728,
+    0.4223330845994887,
+    -0.2632277956692204,
+    -0.24561239690245262,
+    0.41736984132673616,
+    -0.4676802719117398,
+    -0.3884543479176027,
+    0.35910119642621807,
+    -0.7415992103266329,
+    -0.4887363520984491,
+    0.23456648959601412,
+    -1.0905697860448025,
+    -0.5093062883562615,
+    0.031465436405719194,
+    -1.4658187011019788,
+    -0.3940390104463133,
+    -0.23054419136099413,
+    -1.7032262114962118,
+    -0.16344905524422426,
+    -0.49221651981420067,
+    -1.5480902519930944,
+    0.08929596042920585,
+    -0.6794747612401978,
+    -1.1815680788840162,
+    0.2805431640899264,
+    -0.7479140052086535,
+    -0.8371909741427662,
+    0.3831174573974859,
+    -0.7017067447626454,
+    -0.5575062008791745,
+    0.42091128731376365,
+    -0.5708411552137236,
+    -0.32594969374240435,
+    0.4311058881087435,
+    -0.36766932908541367,
+    -0.11714894690275773,
+    0.4349371026100187,
+    -0.10834369913039049,
+    0.07251530656545063,
+    0.4195809765636874,
+    0.15054215984406905,
+    0.18676135169981134,
+    0.3121486361970176,
+    0.31648355687279983,
+    0.15385144303419843,
+    0.0903253557582521,
+    0.3849755103347474,
+    0.016400765079218615,
+    -0.16721073359873057,
+    0.39608798676785273,
+    -0.17477059259274808,
+    -0.3661008400197062,
+    0.3791189610609953,
+    -0.38938911484305166,
+    -0.4883021566974377,
+    0.3434802497017203,
+    -0.6250530324468478,
+    -0.5516480032565536,
+    0.2569332974469811,
+    -0.9163414862656484,
+    -0.5078495683756267,
+    0.07062254569684834,
+    -1.2549223675676402,
+    -0.27494840689511146,
+    -0.2634062231238522,
+    -1.2507443799469196,
+    0.1618934614146904,
+    -0.6883002623968212,
+    -0.5687252742041614,
+    0.6488338030124159,
+    -0.9390906843517266,
+    0.15704620471272868
+  ],
+  "energy_feet": [
+    0.0,
+    0.0,
+    0.025798546854109438,
+    -0.00350527115102818,
+    0.04109563956501991,
+    0.006527236125081635,
+    0.0012762631585348898,
+    0.02945106886799737,
+    -0.00952764896388377,
+    0.007507043445639258,
+    0.02427624016875163,
+    -0.009300175850754202,
+    0.005617730792357467,
+    0.030666160674274186,
+    -0.00018350860633942548,
+    -0.002241529298564476,
+    0.0427151360433802,
+    0.002694722618715048,
+    -0.013088874224233396,
+    0.049462073577225055,
+    -0.007378829468947138,
+    -0.024698992016207684,
+    0.04691496382990821,
+    -0.029650025016578326,
+    -0.03231744888444035,
+    0.03249857000424681,
+    -0.06064339150959154,
+    -0.020425055415843378,
+    0.00594448046972447,
+    -0.06106873268231831,
+    0.017019683524289012,
+    -0.0039033051241652433,
+    -0.022941201651660435,
+    0.058613031980895104,
+    0.01756142746401137,
+    0.024759007944470453,
+    0.07466641523829315,
+    0.0346170994114566,
+    0.03910858680304179,
+    0.05973957121503053,
+    0.035552855307124695,
+    0.0251088028053142,
+    0.045826741262625495,
+    0.020318334972156345,
+    0.014007198246601602,
+    0.04996093838438699,
+    0.009891652746096435,
+    0.03415620561823972,
+    0.0613545066918813,
+    0.05673823704913157,
+    0.057962528051006795,
+    0.04995208482206599,
+    0.07976033215470882,
+    0.04079642033739321,
+    0.007587322674974483,
+    0.0618034688587957,
+    -0.015534767520656752,
+    -0.015880338386537015,
+    0.011295675045004186,
+    -0.04130650048781543,
+    0.03276361995311594,
+    -0.006720517023835873,
+    0.017257386505968343,
+    0.08635408815462012,
+    0.02917482196643226,
+    0.08121945220144153,
+    0.09563532457544963,
+    0.09273247522096911,
+    0.08969989566216084,
+    0.05712904583178342,
+    0.090190922848671,
+    0.03407060221271058,
+    0.0005513866343033816,
+    0.033163560786953754,
+    -0.016775746025579796,
+    0.07555331972310425,
+    0.05862542234785817,
+    0.19720513929785527,
+    0.2399329729238839,
+    0.3387188557676279,
+    0.35001601314925784,
+    0.17550734031175946,
+    0.530272013882631,
+    0.33834037307201315,
+    -0.1000465332842734,
+    0.6527553066094663,
+    0.14864204071831832,
+    -0.5923452689713264,
+    0.6359028515458092,
+    -0.25653293444077185,
+    -1.0621839357014253,
+    0.42088587340608374,
+    -0.8604796115241506,
+    -1.0030623091339197,
+    0.017529765859573443,
+    -1.5303791382306826,
+    -0.6523591394325505,
+    -0.44251905709663397,
+    -1.754614724138802,
+    -0.21928399413070965,
+    -0.7729231624312589,
+    -1.276031247758881,
+    0.11156227099468596,
+    -0.9069676187796871,
+    -0.8540563654561754,
+    0.29155449508443476,
+    -0.9283410195989064,
+    -0.5222689112015393,
+    0.39019474377474284,
+    -0.8741660860928618,
+    -0.18204038066176892,
+    0.47695997708668686,
+    -0.3937188953142901,
+    0.18853440621109213,
+    0.5450941568712069,
+    0.21594808333006188,
+    0.4752782638973801,
+    0.45433304640290945,
+    0.5773674196341627,
+    0.4067401503198037,
+    0.033312227442649556,
+    0.5745570719295523,
+    0.05479468158762668,
+    -0.4401025109104558,
+    0.4192217779068361,
+    -0.35143779053070634,
+    -0.6283145284972931,
+    0.227826761277652,
+    -0.6520349618702359,
+    -0.5307746538450148,
+    0.0869841115730442,
+    -0.758523258839332,
+    -0.3953325191478776,
+    0.011656218213331848,
+    -0.8274179588262703,
+    -0.34136662413290686,
+    -0.1496048794960786,
+    -1.0707666363307344,
+    -0.26431603163238515,
+    -0.5009654349866444,
+    -1.2252952425018453,
+    0.039941186362490666,
+    -0.8707637581398683,
+    -0.7125967802022415,
+    0.42138349193983415,
+    -1.000791961576123,
+    -0.10044286654287093,
+    0.6460942955114031,
+    -0.47336027866809977,
+    0.2773471176432146
+  ],
+  "energy_head": [
+    -0.034774035867451085,
+    -0.034774035867451085,
+    0.06488500415366683,
+    -0.03406812656386902,
+    0.13397890492118353,
+    0.017865966716871302,
+    -0.07211328651562271,
+    0.11824463275714113,
+    -0.036796548755392594,
+    -0.07368414111935179,
+    0.10304228352176363,
+    -0.08522258791577156,
+    -0.07837069180170901,
+    0.09424662158105152,
+    -0.12559128658104174,
+    -0.08842897506672963,
+    0.09173293815201272,
+    -0.15859298884640993,
+    -0.10230132927051583,
+    0.09761706709973242,
+    -0.1777249666416164,
+    -0.11977283767867228,
+    0.1163547642342786,
+    -0.1852012140658499,
+    -0.14305273686709843,
+    0.1471513939513055,
+    -0.1956151137063859,
+    -0.17920103262891524,
+    0.1811297903692335,
+    -0.22994746599087434,
+    -0.2313911735684674,
+    0.20134333210227018,
+    -0.3070618305280396,
+    -0.2871090177666026,
+    0.18996762256099176,
+    -0.43392275409022885,
+    -0.31979838256399545,
+    0.13956551874112738,
+    -0.598653030432525,
+    -0.3102260542329838,
+    0.05718816312318015,
+    -0.7748332205936923,
+    -0.2599189742672894,
+    -0.04095654485728395,
+    -0.930285056873557,
+    -0.18256100706963618,
+    -0.13871328201131705,
+    -1.0115609246901587,
+    -0.09126130022324797,
+    -0.22824304018401864,
+    -0.90816374147485,
+    0.00899011639139946,
+    -0.3093477758532063,
+    -0.7298450320724252,
+    0.1177543136241509,
+    -0.3826726248645718,
+    -0.5051474002078751,
+    0.233674359045411,
+    -0.44641824197547636,
+    -0.23802914674361048,
+    0.3557756720046471,
+    -0.48702433400426526,
+    0.07134296742383206,
+    0.48423145602043205,
+    -0.047144481277316075,
+    0.41914423439980975,
+    0.6107170710132962,
+    0.5168003670457082,
+    0.7073104592071329,
+    0.5033167333085105,
+    0.6947566462659978,
+    0.5007839314804025,
+    0.04038855524802626,
+    0.6823892774735796,
+    0.20339727497354682,
+    -0.48279974160953854,
+    0.6336968154981569,
+    -0.13971276529499188,
+    -0.8734335004682471,
+    0.5461396957430704,
+    -0.5231824438443571,
+    -0.886832521387332,
+    0.40633423048835426,
+    -0.9407578460191973,
+    -0.8097219594323062,
+    0.20217941314777732,
+    -1.3772161698186207,
+    -0.6359617557519694,
+    -0.06268223067586765,
+    -1.7882738466289712,
+    -0.37934040530061264,
+    -0.350156918884055,
+    -1.8609418994058662,
+    -0.09495066775916672,
+    -0.5936542498145669,
+    -1.4627873499175759,
+    0.14781433658039456,
+    -0.7401250325493443,
+    -1.0761775591764489,
+    0.3127967861101838,
+    -0.787357046943002,
+    -0.7371992608019233,
+    0.41152428443138556,
+    -0.7683417413105947,
+    -0.43748710641666955,
+    0.4715453834817973,
+    -0.7085848290984095,
+    -0.16449158460173985,
+    0.510184494794014,
+    -0.5624268364892169,
+    0.08721242040470023,
+    0.5366489829241415,
+    -0.1712119458753021,
+    0.32565591074565114,
+    0.5616677568592965,
+    0.2645885306340951,
+    0.5559403241409188,
+    0.5635639868069164,
+    0.5695079169272361,
+    0.509462805980612,
+    0.22145787130064976,
+    0.5374159529918899,
+    0.26301785272494516,
+    -0.18166707496520035,
+    0.4902828626198199,
+    0.008577423049525024,
+    -0.5710869398597576,
+    0.43633576617598724,
+    -0.2529323224701341,
+    -0.6410626111331987,
+    0.36781153215088813,
+    -0.5278553418344983,
+    -0.6379435437306804,
+    0.2648096498293462,
+    -0.8292171037835909,
+    -0.5642613958143113,
+    0.09596518040135393,
+    -1.165282838209524,
+    -0.3836434525694261,
+    -0.15636002090069323,
+    -1.4397130451347182,
+    -0.07106304598679825,
+    -0.48390980170617903,
+    -0.9396582068884337,
+    0.33036804502178296,
+    -0.7997436867081189,
+    -0.28139132878024564,
+    0.6713197167868976,
+    -0.7174158560783152,
+    0.24712999675809727
+  ],
+  "energy_torso": [
+    0.0,
+    0.0,
+    0.04361712297896842,
+    0.007570549890990404,
+    0.07583814709799497,
+    0.014146007042368715,
+    0.018514297743884432,
+    0.06032422424166001,
+    -0.006050017804068577,
+    0.024390838405495704,
+    0.052763735569554354,
+    -0.01964244599153174,
+    0.022289748585032444,
+    0.05232109613251289,
+    -0.022312170187045264,
+    0.01933098916481491,
+    0.059510186892164724,
+    -0.009068054098524625,
+    0.017538774874628446,
+    0.08049795321123962,
+    0.01408111950149539,
+    0.011084147480961953,
+    0.11936859472323433,
+    0.03630019604256516,
+    -0.010128886058963102,
+    0.16930456951577688,
+    0.04432171943516312,
+    -0.057041122425951635,
+    0.2203199155173967,
+    0.02591052489637985,
+    -0.1342272933477839,
+    0.2611391321140558,
+    -0.031296307594807615,
+    -0.23132800406012283,
+    0.27539644771998606,
+    -0.13985901603265866,
+    -0.30834803122677024,
+    0.2453841808022018,
+    -0.30162309441754276,
+    -0.3217200889030361,
+    0.16613651341094077,
+    -0.4945073183353719,
+    -0.27065927230478876,
+    0.05477505559253726,
+    -0.6756239859171714,
+    -0.18365238668398676,
+    -0.05919369155483134,
+    -0.7913019173269489,
+    -0.09004088550984235,
+    -0.15343388736832286,
+    -0.7625589951623379,
+    -0.002964835317199599,
+    -0.22466518741483177,
+    -0.6389415936247369,
+    0.0803973053001561,
+    -0.2799321284519136,
+    -0.4729660264458331,
+    0.16868319774412766,
+    -0.3212514518048303,
+    -0.2667058648687526,
+    0.2650004244907963,
+    -0.3113782468980185,
+    -0.024959872792327642,
+    0.3626385600151311,
+    -0.09483422822113818,
+    0.23358228471417342,
+    0.4394239692244205,
+    0.27146586535755646,
+    0.43968788342929,
+    0.39623715454627473,
+    0.5185507391603743,
+    0.41503986558447276,
+    0.1175191773561386,
+    0.5890788712093533,
+    0.23016344985213044,
+    -0.27128968803750975,
+    0.6005154208448669,
+    -0.025983312404462833,
+    -0.6589890087470767,
+    0.5695672454886158,
+    -0.3416645101627859,
+    -0.8369037392482637,
+    0.48466693740024525,
+    -0.7148526568576794,
+    -0.8415441108728253,
+    0.3288880211914922,
+    -1.1339611001664198,
+    -0.7296414136856052,
+    0.0969553287723347,
+    -1.5615202748933807,
+    -0.5101869196878368,
+    -0.19157832538468944,
+    -1.8886864825862957,
+    -0.2156749897911936,
+    -0.4880102663510275,
+    -1.6100484758019131,
+    0.09189603018802717,
+    -0.7274440924420134,
+    -1.1445478056607516,
+    0.3434951990906201,
+    -0.8573892161446038,
+    -0.7060991911300034,
+    0.49609446628051923,
+    -0.8660594209047934,
+    -0.35540899145887006,
+    0.5528175193322824,
+    -0.7859477291358897,
+    -0.09132549073837237,
+    0.5542188249587829,
+    -0.5727504805430212,
+    0.1289203012955018,
+    0.5493965215735435,
+    -0.1321912901915571,
+    0.3533701805457846,
+    0.5668089972759878,
+    0.32120277316939977,
+    0.5911499288894922,
+    0.5463644393076702,
+    0.5847354914903147,
+    0.4899196499400281,
+    0.1666754686727543,
+    0.5564522966506738,
+    0.23908863949095324,
+    -0.25033566642364347,
+    0.5112964207950301,
+    -0.02500279059556154,
+    -0.6079017054063307,
+    0.45732651318328976,
+    -0.2950617531659846,
+    -0.6731871332111665,
+    0.39231595187722634,
+    -0.5745441767652721,
+    -0.6785187713763028,
+    0.29474944682521653,
+    -0.8799603512056879,
+    -0.607693331061325,
+    0.12037361562331128,
+    -1.2260341997047608,
+    -0.4068190700526657,
+    -0.16498575229618773,
+    -1.4521177761858555,
+    -0.04482888294777676,
+    -0.5451131710531905,
+    -0.949707125474185,
+    0.4074712550501173,
+    -0.8915923906889032,
+    -0.2339369158437885,
+    0.7609228912878598,
+    -0.6975645192183679,
+    0.30503231713109913
+  ]
+}

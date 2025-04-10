@@ -1,1 +1,0 @@
-documentation and image folder for LabanEditor
