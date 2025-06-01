@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file:///mnt/c/Users/berti/Mi_equipo/Documentos/Roberto/MASTER/TFM/MoRTE-Laban/laban.owl"
+         xmlns="file:///mnt/c/Users/berti/Mi_equipo/Documentos/Roberto/MASTER/TFM/MoRTE-Laban/laban.owl#">
+
+<owl:Ontology rdf:about="file:///mnt/c/Users/berti/Mi_equipo/Documentos/Roberto/MASTER/TFM/MoRTE-Laban/laban.owl"/>
+
+<owl:ObjectProperty rdf:about="#hasSymbol">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#MotionSegment"/>
+  <rdfs:range rdf:resource="#Symbol"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasEffortQuality">
+  <rdfs:domain rdf:resource="#MotionSegment"/>
+  <rdfs:range rdf:resource="#EffortQuality"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasTimeQuality">
+  <rdfs:domain rdf:resource="#MotionSegment"/>
+  <rdfs:range rdf:resource="#TimeQuality"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasSpaceQuality">
+  <rdfs:domain rdf:resource="#MotionSegment"/>
+  <rdfs:range rdf:resource="#SpaceQuality"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasFlowQuality">
+  <rdfs:domain rdf:resource="#MotionSegment"/>
+  <rdfs:range rdf:resource="#FlowQuality"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#jointName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Symbol"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#directionName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Symbol"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#levelName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Symbol"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#MotionSegment">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Symbol">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EffortQuality">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TimeQuality">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SpaceQuality">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FlowQuality">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Strong">
+  <rdfs:subClassOf rdf:resource="#EffortQuality"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Light">
+  <rdfs:subClassOf rdf:resource="#EffortQuality"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sudden">
+  <rdfs:subClassOf rdf:resource="#TimeQuality"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sustained">
+  <rdfs:subClassOf rdf:resource="#TimeQuality"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Direct">
+  <rdfs:subClassOf rdf:resource="#SpaceQuality"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Indirect">
+  <rdfs:subClassOf rdf:resource="#SpaceQuality"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BoundFlow">
+  <rdfs:subClassOf rdf:resource="#FlowQuality"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FreeFlow">
+  <rdfs:subClassOf rdf:resource="#FlowQuality"/>
+</owl:Class>
+
+
+</rdf:RDF>
